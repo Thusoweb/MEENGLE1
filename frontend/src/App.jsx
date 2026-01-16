@@ -1,0 +1,14 @@
+import React from 'react';
+import './styles/designSystem.css';
+
+function App() {
+  return (
+    <div className="app">
+      <h1>?? MEENGLE</h1>
+      <p>Social Dating Platform</p>
+      <p>Loading...</p>
+    </div>
+  );
+}
+
+export default App;
