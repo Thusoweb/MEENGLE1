@@ -30,8 +30,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 10,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:4:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:3:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:2:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 4,
@@ -42,8 +66,7 @@
               "RelativeToolTip": "frontend\\src\\services\\firebaseAuthService.js",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAOUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-01-09T00:32:18.879Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-09T00:32:18.879Z"
             },
             {
               "$type": "Document",
@@ -55,8 +78,7 @@
               "RelativeToolTip": "frontend\\src\\config\\firebase.js",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-01-09T00:31:55.96Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-09T00:31:55.96Z"
             },
             {
               "$type": "Document",
@@ -68,8 +90,7 @@
               "RelativeToolTip": "60FPS_VALIDATION_COMPLETE.md",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAEUBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2026-01-09T00:26:18.563Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-09T00:26:18.563Z"
             },
             {
               "$type": "Document",
@@ -81,8 +102,7 @@
               "RelativeToolTip": "QUALITY_ASSURANCE_VALIDATION.js",
               "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-01-09T00:23:35.045Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-09T00:23:35.045Z"
             },
             {
               "$type": "Document",

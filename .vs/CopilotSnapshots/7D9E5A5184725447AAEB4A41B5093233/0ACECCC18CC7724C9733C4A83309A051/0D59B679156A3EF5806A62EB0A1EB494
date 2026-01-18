@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MEENGLE - Meet Your Match in South Africa. Safe, authentic dating app with POPIA compliance.">
+  <meta name="theme-color" content="#667eea">
+  <title>MEENGLE - Meet Your Match</title>
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/responsive.css">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="icon" type="image/png" href="/assets/icons/icon-192x192.png">
+  <link rel="apple-touch-icon" href="/assets/icons/icon-192x192.png">
+  
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    .loading-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      z-index: 9999;
+      color: white;
+    }
+
+    .spinner {
+      width: 50px;
+      height: 50px;
+      border: 4px solid rgba(255, 255, 255, 0.3);
+      border-top-color: white;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin-bottom: 20px;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    .loading-text {
+      font-size: 18px;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div id="app" class="loading-screen">
+    <div class="spinner"></div>
+    <p class="loading-text">Loading MEENGLE...</p>
+  </div>
+
+  <!-- Service Worker Registration -->
+  <script>
+    // Register service worker for PWA functionality
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js')
+          .then((registration) => {
+            console.log('✅ Service Worker registered:', registration.scope);
+          })
+          .catch((error) => {
+            console.warn('❌ Service Worker registration failed:', error);
+          });
+      });
+    }
+
+    // Check authentication and route appropriately
+    document.addEventListener('DOMContentLoaded', async () => {
+      try {
+        const token = localStorage.getItem('authToken');
+        const appContainer = document.getElementById('app');
+
+        if (token) {
+          // User is logged in - redirect to dashboard
+          console.log('✅ User authenticated, redirecting to dashboard...');
+          appContainer.innerHTML = '<p style="text-align: center; color: white; margin-top: 50px;">Redirecting to dashboard...</p>';
+          setTimeout(() => {
+            window.location.href = '/pages/dashboard-real.html';
+          }, 500);
+        } else {
+          // User is not logged in - redirect to landing page
+          console.log('❌ User not authenticated, redirecting to landing page...');
+          appContainer.innerHTML = '<p style="text-align: center; color: white; margin-top: 50px;">Redirecting to landing page...</p>';
+          setTimeout(() => {
+            window.location.href = '/pages/landing.html';
+          }, 500);
+        }
+      } catch (error) {
+        console.error('❌ Error during routing:', error);
+        // Default to landing page on error
+        window.location.href = '/pages/landing.html';
+      }
+    });
+  </script>
+
+  <!-- Scripts -->
+  <script src="/assets/js/api-client.js"></script>
+  <script src="/assets/js/auth-guard.js"></script>
+  <script src="/assets/js/error-handler.js"></script>
+  <script src="/assets/js/loading.js"></script>
+</body>
+</html>
