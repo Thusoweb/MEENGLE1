@@ -29,13 +29,14 @@ class SmartMatchingService {
           matchScore: 0
         }));
 
-      // BEAUTIFUL PROFILE FILTERING
-      // If user paid less than R199.99/month, filter out beautiful profiles
+      // SILENT BEAUTIFUL PROFILE FILTERING (no visible messaging)
+      // Only full Wildfire (R199.99/month) subscribers see profiles rated 8+
+      // Everyone else just gets fewer matches - they don't know why
       if (userProfile.tier !== 'wildfire_monthly') {
         candidates = candidates.filter(candidate => {
-          // If candidate is marked as beautiful and user doesn't have full Wildfire
+          // Silently hide beautiful profiles (rating 8+) from non-monthly-wildfire users
           if (candidate.beautyRating && candidate.beautyRating >= 8) {
-            return false; // Hide beautiful profiles
+            return false;
           }
           return true;
         });

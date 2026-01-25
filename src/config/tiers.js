@@ -115,7 +115,7 @@ export const TIERS = {
       'Unlimited video calls',
       'VIP priority support',
       '? daily likes',
-      '? FULL access to beautiful profiles'
+      'Premium match algorithm'
     ],
     features_full: {
       dailyLikes: Infinity,
@@ -141,9 +141,8 @@ export const TIERS = {
     features: [
       '??? 24-hour Wildfire boost',
       'All Flame features for 24 hours',
-      'Limited beautiful profile access',
       '? daily likes for 24 hours',
-      '?? Can like only 5 beautiful profiles/day'
+      'Improved match quality'
     ],
     features_full: {
       dailyLikes: Infinity,
