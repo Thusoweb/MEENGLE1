@@ -32,7 +32,7 @@ export const TIERS = {
     id: 'spark_monthly',
     name: 'Spark',
     badge: '?',
-    price: 9.99,
+    price: 59.99,
     currency: 'ZAR',
     features: [
       '? Spark badge',
@@ -55,7 +55,7 @@ export const TIERS = {
     id: 'sparkplus_monthly',
     name: 'Spark+',
     badge: '?+',
-    price: 16.99,
+    price: 99.99,
     currency: 'ZAR',
     popular: true,
     features: [
@@ -80,7 +80,7 @@ export const TIERS = {
     id: 'flame_monthly',
     name: 'Flame',
     badge: '??',
-    price: 24.99,
+    price: 149.99,
     currency: 'ZAR',
     features: [
       '?? Flame badge',
@@ -105,7 +105,7 @@ export const TIERS = {
     id: 'wildfire_monthly',
     name: 'Wildfire',
     badge: '???',
-    price: 34.99,
+    price: 199.99,
     currency: 'ZAR',
     premium: true,
     features: [
