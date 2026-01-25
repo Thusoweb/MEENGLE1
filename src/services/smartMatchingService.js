@@ -21,13 +21,25 @@ class SmartMatchingService {
       const candidatesRef = collection(db, 'users');
       const snapshot = await getDocs(candidatesRef);
 
-      const candidates = snapshot.docs
+      let candidates = snapshot.docs
         .filter(doc => doc.id !== userId && !doc.data().banned)
         .map(doc => ({
           id: doc.id,
           ...doc.data(),
           matchScore: 0
         }));
+
+      // BEAUTIFUL PROFILE FILTERING
+      // If user paid less than R199.99/month, filter out beautiful profiles
+      if (userProfile.tier !== 'wildfire_monthly') {
+        candidates = candidates.filter(candidate => {
+          // If candidate is marked as beautiful and user doesn't have full Wildfire
+          if (candidate.beautyRating && candidate.beautyRating >= 8) {
+            return false; // Hide beautiful profiles
+          }
+          return true;
+        });
+      }
 
       // Calculate smart match scores
       const scoredCandidates = candidates.map(candidate => ({

@@ -108,12 +108,14 @@ export const TIERS = {
     price: 199.99,
     currency: 'ZAR',
     premium: true,
+    duration: 'monthly',
     features: [
       '??? Wildfire VIP badge',
       'All Flame features',
       'Unlimited video calls',
       'VIP priority support',
-      '? daily likes'
+      '? daily likes',
+      '? FULL access to beautiful profiles'
     ],
     features_full: {
       dailyLikes: Infinity,
@@ -123,7 +125,37 @@ export const TIERS = {
       videoCallsPerMonth: Infinity,
       unlimitedMessages: true,
       premiumFilters: true,
-      vipSupport: true
+      vipSupport: true,
+      accessBeautifulProfiles: true
+    }
+  },
+
+  WILDFIRE_DAILY: {
+    id: 'wildfire_daily',
+    name: 'Wildfire Daily',
+    badge: '???',
+    price: 34.99,
+    currency: 'ZAR',
+    premium: false,
+    duration: 'daily',
+    features: [
+      '??? 24-hour Wildfire boost',
+      'All Flame features for 24 hours',
+      'Limited beautiful profile access',
+      '? daily likes for 24 hours',
+      '?? Can like only 5 beautiful profiles/day'
+    ],
+    features_full: {
+      dailyLikes: Infinity,
+      advancedFilters: true,
+      seeWhoLiked: true,
+      videoCalls: true,
+      videoCallsPerMonth: 50,
+      unlimitedMessages: true,
+      premiumFilters: true,
+      vipSupport: false,
+      accessBeautifulProfiles: false,
+      limitedBeautifulProfileAccess: 5
     }
   }
 };
