@@ -1,0 +1,245 @@
+/* SOS Component Styling */
+
+.sos-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.sos-card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #d32f2f;
+}
+
+.sos-card h3 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.sos-card p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.contacts-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.contacts-form input {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.contacts-form input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.contacts-form button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.2s;
+}
+
+.contacts-form button:hover {
+  transform: translateY(-2px);
+}
+
+.contacts-form button:disabled {
+  opacity: 0.6;
+}
+
+.contacts-list {
+  margin-top: 25px;
+}
+
+.contacts-list h4 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.contact-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.contact-name {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.contact-item p {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.remove-btn {
+  background: #f5f5f5;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #d32f2f;
+  font-size: 18px;
+  transition: all 0.2s;
+}
+
+.remove-btn:hover {
+  background: #ffebee;
+}
+
+.warning {
+  background: #fff3cd;
+  color: #856404;
+  padding: 12px;
+  border-radius: 6px;
+  margin-top: 15px;
+}
+
+/* SOS Button Demo */
+.sos-button-demo {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border-left: 4px solid #d32f2f;
+}
+
+.sos-button-demo h3 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.sos-button-demo p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.sos-btn-demo {
+  background: linear-gradient(135deg, #d32f2f 0%, #c62828 100%);
+  color: white;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.3s;
+}
+
+.sos-btn-demo:not(:disabled):hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(211, 47, 47, 0.4);
+}
+
+.sos-btn-demo:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Safety Tips Card */
+.safety-tips-card {
+  background: #e8f5e9;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 20px;
+  border-left: 4px solid #4caf50;
+}
+
+.safety-tips-card h3 {
+  color: #1b5e20;
+  margin-bottom: 15px;
+}
+
+.safety-tips-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.safety-tips-card li {
+  color: #2e7d32;
+  padding: 8px 0;
+  line-height: 1.5;
+}
+
+/* Location Sharing Card */
+.location-sharing-card {
+  background: #e3f2fd;
+  border-radius: 12px;
+  padding: 25px;
+  border-left: 4px solid #2196f3;
+}
+
+.location-sharing-card h3 {
+  color: #0d47a1;
+  margin-bottom: 10px;
+}
+
+.location-sharing-card p {
+  color: #1565c0;
+  margin-bottom: 15px;
+}
+
+.share-btn {
+  background: #2196f3;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  width: 100%;
+}
+
+.share-btn:hover {
+  background: #1976d2;
+}
+
+.info {
+  font-size: 12px;
+  color: #1565c0;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .sos-container {
+    padding: 10px;
+  }
+
+  .contact-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .remove-btn {
+    align-self: flex-end;
+    margin-top: 10px;
+  }
+}

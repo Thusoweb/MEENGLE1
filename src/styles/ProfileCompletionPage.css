@@ -1,0 +1,373 @@
+/* Profile Completion Page Styles */
+
+.profile-completion-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-container {
+  background: white;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.completion-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.completion-header h1 {
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+.completion-header p {
+  font-size: 14px;
+  opacity: 0.9;
+  margin-bottom: 15px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: white;
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+.progress-text {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.profile-form {
+  padding: 30px 20px;
+}
+
+.error-message {
+  background: #fee;
+  color: #c33;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #fcc;
+  font-size: 14px;
+}
+
+.form-section {
+  margin-bottom: 30px;
+}
+
+.form-section h2 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.section-hint {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 12px;
+}
+
+/* Photo Upload */
+.photo-upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.photo-preview {
+  width: 150px;
+  height: 150px;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 3px solid #667eea;
+}
+
+.upload-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 20px;
+  border: 2px dashed #667eea;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #f9f9f9;
+}
+
+.upload-label:hover {
+  background: #f0f0f0;
+  border-color: #764ba2;
+}
+
+.upload-label input {
+  display: none;
+}
+
+.upload-label span {
+  font-weight: 600;
+  color: #667eea;
+  font-size: 14px;
+}
+
+.upload-hint {
+  font-size: 12px;
+  color: #999;
+}
+
+/* Bio Input */
+.bio-input {
+  width: 100%;
+  min-height: 100px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 14px;
+  resize: vertical;
+  transition: border 0.3s ease;
+}
+
+.bio-input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.bio-input:disabled {
+  background: #f5f5f5;
+  cursor: not-allowed;
+}
+
+.char-count {
+  font-size: 12px;
+  color: #999;
+  margin-top: 8px;
+  text-align: right;
+}
+
+/* Location Select */
+.location-select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  background: white;
+  cursor: pointer;
+  transition: border 0.3s ease;
+}
+
+.location-select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.location-select:disabled {
+  background: #f5f5f5;
+  cursor: not-allowed;
+}
+
+/* Interests Grid */
+.interests-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 10px;
+}
+
+.interest-tag {
+  padding: 10px 12px;
+  border: 2px solid #ddd;
+  background: white;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 13px;
+  font-weight: 500;
+  color: #333;
+}
+
+.interest-tag:hover:not(:disabled) {
+  border-color: #667eea;
+  background: #f0f0f0;
+}
+
+.interest-tag.selected {
+  background: #667eea;
+  color: white;
+  border-color: #667eea;
+}
+
+.interest-tag:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Preview Section */
+.preview-section {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+
+.profile-preview {
+  background: white;
+  border-radius: 8px;
+  padding: 15px;
+  display: flex;
+  gap: 15px;
+}
+
+.preview-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  object-fit: cover;
+  background: #f0f0f0;
+}
+
+.preview-info {
+  flex: 1;
+}
+
+.preview-info h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.location-info {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.bio-preview {
+  font-size: 13px;
+  color: #333;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.preview-interests {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.preview-tag {
+  display: inline-block;
+  background: #eee;
+  color: #333;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+/* Submit Button */
+.submit-button {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.submit-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+}
+
+.submit-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.skip-link {
+  text-align: center;
+  font-size: 12px;
+  color: #999;
+  margin-top: 15px;
+}
+
+/* Loading State */
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-size: 18px;
+  color: #667eea;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .profile-completion-page {
+    padding: 10px;
+  }
+
+  .profile-container {
+    border-radius: 8px;
+  }
+
+  .completion-header {
+    padding: 20px 15px;
+  }
+
+  .completion-header h1 {
+    font-size: 24px;
+  }
+
+  .profile-form {
+    padding: 20px 15px;
+  }
+
+  .form-section {
+    margin-bottom: 20px;
+  }
+
+  .interests-grid {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  }
+
+  .profile-preview {
+    flex-direction: column;
+  }
+
+  .preview-photo {
+    width: 100%;
+    height: 150px;
+  }
+}

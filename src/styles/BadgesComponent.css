@@ -1,0 +1,134 @@
+/* Badges Component Styling */
+
+.badges-inline {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.badge-inline {
+  position: relative;
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.badge-inline:hover {
+  transform: scale(1.2);
+}
+
+.badge-icon {
+  display: inline-block;
+}
+
+.badge-tooltip {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 6px;
+  white-space: nowrap;
+  z-index: 1000;
+  margin-bottom: 5px;
+  font-size: 12px;
+}
+
+.badge-tooltip:after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: #333;
+}
+
+.tooltip-label {
+  font-weight: 600;
+  margin: 0;
+  margin-bottom: 3px;
+}
+
+.tooltip-description {
+  margin: 0;
+  opacity: 0.9;
+  font-size: 11px;
+}
+
+/* Badges Grid */
+.badges-grid {
+  padding: 20px;
+}
+
+.badges-grid h3 {
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.badges-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 15px;
+}
+
+.badge-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+  border-top: 3px solid #667eea;
+}
+
+.badge-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.badge-icon-large {
+  font-size: 48px;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.badge-label {
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 8px 0;
+  font-size: 14px;
+}
+
+.badge-description {
+  color: #666;
+  font-size: 12px;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.badges-loading {
+  text-align: center;
+  color: #999;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .badges-list {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 10px;
+  }
+
+  .badge-card {
+    padding: 15px;
+  }
+
+  .badge-icon-large {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+}

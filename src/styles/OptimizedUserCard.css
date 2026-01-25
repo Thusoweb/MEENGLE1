@@ -1,0 +1,118 @@
+/**
+ * Optimized User Card - 60FPS GPU Accelerated
+ * Uses MEENGLE design system variables
+ */
+
+.optimized-user-card {
+  width: 100%;
+  height: 600px;
+  background: white;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  cursor: grab;
+  
+  /* GPU acceleration */
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+  
+  /* 60FPS smooth transitions */
+  transition: var(--transition-transform);
+  
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  touch-action: none;
+}
+
+.optimized-user-card:active {
+  cursor: grabbing;
+  box-shadow: var(--shadow-lg);
+}
+
+.card-image {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+  
+  /* Optimize rendering */
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+.card-info {
+  flex: 1;
+  padding: var(--spacing-4);
+  background: white;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-info h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 var(--spacing-2) 0;
+  color: #333;
+  contain: layout style;
+}
+
+.location {
+  font-size: 13px;
+  color: #666;
+  margin: var(--spacing-1) 0 var(--spacing-3) 0;
+}
+
+.bio {
+  font-size: 13px;
+  color: #333;
+  line-height: 1.4;
+  margin: 0 0 var(--spacing-3) 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+.interests {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-2);
+  contain: layout;
+}
+
+.tag {
+  background: #f0f0f0;
+  color: #333;
+  padding: var(--spacing-1) var(--spacing-3);
+  border-radius: var(--radius-full);
+  font-size: 11px;
+  font-weight: 500;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .optimized-user-card {
+    height: 500px;
+  }
+
+  .card-image {
+    height: 65%;
+  }
+
+  .card-info {
+    padding: var(--spacing-3);
+  }
+
+  .card-info h2 {
+    font-size: 18px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .optimized-user-card {
+    transition: none;
+  }
+}

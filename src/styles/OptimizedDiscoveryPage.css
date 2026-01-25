@@ -1,0 +1,195 @@
+/**
+ * Optimized Discovery Page - 60FPS
+ * Uses MEENGLE design system
+ */
+
+.optimized-discovery-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-5);
+  contain: layout style paint;
+}
+
+.discovery-header {
+  text-align: center;
+  color: white;
+  margin-bottom: var(--spacing-5);
+  contain: layout style;
+}
+
+.discovery-header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 var(--spacing-2) 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+.location-badge {
+  font-size: 14px;
+  opacity: 0.9;
+  margin: 0;
+}
+
+.cards-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  margin-bottom: var(--spacing-5);
+  contain: layout;
+}
+
+.discovery-controls {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-5);
+  margin-bottom: var(--spacing-5);
+  contain: layout style;
+}
+
+.control-button {
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius-full);
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  
+  /* 60FPS optimization */
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  will-change: transform;
+  transition: var(--transition-transform);
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.control-button:active {
+  transform: scale(0.95);
+}
+
+.pass-button {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.pass-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.like-button {
+  background: linear-gradient(135deg, #FF6B6B 0%, #FF8E72 100%);
+  color: white;
+  box-shadow: var(--shadow-md);
+}
+
+.like-button:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+.like-button:active {
+  transform: scale(0.92);
+}
+
+.undo-button {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  font-size: 20px;
+  width: 50px;
+  height: 50px;
+}
+
+.undo-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.progress-bar {
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  margin-bottom: var(--spacing-3);
+  contain: layout style;
+}
+
+.progress-fill {
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: var(--radius-full);
+  transition: width 0.3s var(--transition-base);
+  will-change: width;
+}
+
+.loading-state,
+.error-state,
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  color: white;
+  text-align: center;
+  padding: var(--spacing-5);
+  -webkit-font-smoothing: antialiased;
+}
+
+.empty-state h2 {
+  font-size: 28px;
+  margin-bottom: var(--spacing-3);
+  contain: layout style;
+}
+
+.empty-state p {
+  font-size: 16px;
+  margin-bottom: var(--spacing-5);
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .optimized-discovery-page {
+    padding: var(--spacing-4);
+  }
+
+  .discovery-header {
+    margin-bottom: var(--spacing-4);
+  }
+
+  .discovery-header h1 {
+    font-size: 24px;
+  }
+
+  .cards-container {
+    margin-bottom: var(--spacing-4);
+  }
+
+  .control-button {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
+
+  .discovery-controls {
+    gap: var(--spacing-4);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .control-button {
+    transition: none;
+  }
+
+  .progress-fill {
+    transition: none;
+  }
+}
