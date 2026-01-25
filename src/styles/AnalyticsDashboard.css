@@ -1,0 +1,160 @@
+/* Analytics Dashboard CSS */
+
+.analytics-dashboard {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.dashboard-header h1 {
+  color: #333;
+  margin: 0;
+}
+
+.refresh-btn {
+  background: #667eea;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.analytics-loading {
+  text-align: center;
+  padding: 40px;
+  color: #999;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.metric-card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.metric-card h3 {
+  margin: 0 0 15px 0;
+  color: #666;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.metric-value {
+  margin: 0;
+  color: #667eea;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.chart-card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.chart-card h3 {
+  margin: 0 0 20px 0;
+  color: #333;
+}
+
+.tier-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.tier-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.tier-name {
+  min-width: 80px;
+  text-transform: capitalize;
+  color: #666;
+  font-weight: 600;
+}
+
+.bar-container {
+  flex: 1;
+  height: 30px;
+  background: #f0f0f0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.bar {
+  height: 100%;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  transition: width 0.3s;
+}
+
+.bar-value {
+  min-width: 40px;
+  text-align: right;
+  color: #666;
+  font-weight: 600;
+}
+
+.engagement-card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.engagement-card h3 {
+  margin: 0 0 20px 0;
+  color: #333;
+}
+
+.engagement-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.engagement-item {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.engagement-item .label {
+  margin: 0 0 10px 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.engagement-item .value {
+  margin: 0;
+  color: #667eea;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+}

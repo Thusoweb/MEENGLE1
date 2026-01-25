@@ -1,0 +1,271 @@
+/* Referrals Component CSS */
+
+.referrals-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.referral-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.referral-header h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.referral-header p {
+  color: #666;
+  font-size: 16px;
+}
+
+.referral-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.stat-box {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stat-box h3 {
+  margin: 0 0 10px 0;
+  color: #667eea;
+  font-size: 24px;
+}
+
+.stat-box p {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.referral-link-card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.referral-link-card h3 {
+  margin: 0 0 20px 0;
+  color: #333;
+}
+
+.link-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.link-input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-family: monospace;
+  font-size: 12px;
+}
+
+.copy-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.2s;
+}
+
+.copy-btn:hover {
+  transform: translateY(-2px);
+}
+
+.info {
+  color: #999;
+  font-size: 13px;
+  margin: 0;
+}
+
+.program-info {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.program-info h3 {
+  margin: 0 0 20px 0;
+  color: #333;
+}
+
+.info-items {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.info-item {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+.info-item .icon {
+  font-size: 24px;
+  min-width: 30px;
+}
+
+.info-item p {
+  margin: 0;
+  color: #666;
+}
+
+.info-item p strong {
+  color: #333;
+}
+
+.referral-history {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.referral-history h3 {
+  margin: 0 0 20px 0;
+  color: #333;
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.history-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+.ref-user {
+  margin: 0 0 5px 0;
+  color: #333;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.ref-status {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.ref-status.pending {
+  color: #ffc107;
+}
+
+.ref-status.completed {
+  color: #4caf50;
+}
+
+.ref-reward {
+  margin: 0 0 5px 0;
+  color: #4caf50;
+  font-weight: 700;
+  text-align: right;
+}
+
+.ref-date {
+  margin: 0;
+  color: #999;
+  font-size: 12px;
+  text-align: right;
+}
+
+.leaderboard {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.leaderboard h3 {
+  margin: 0 0 20px 0;
+  color: #333;
+}
+
+.leaderboard-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.leaderboard-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+.rank {
+  background: #667eea;
+  color: white;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.name {
+  flex: 1;
+  color: #333;
+  font-weight: 600;
+}
+
+.count {
+  color: #666;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .referrals-container {
+    padding: 10px;
+  }
+
+  .referral-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .link-box {
+    flex-direction: column;
+  }
+
+  .history-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
